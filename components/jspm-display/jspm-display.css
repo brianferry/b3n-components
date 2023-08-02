@@ -1,0 +1,6 @@
+:host {
+    display: block;
+    max-width: fit-content;
+    max-height: fit-content;
+    overflow: scroll;
+}

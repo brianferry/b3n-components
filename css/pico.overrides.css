@@ -1,0 +1,54 @@
+/* Indigo Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #11191f;
+  --primary-hover: #243542;
+  --background-color: #94e82a;
+  --card-background-color: #94e82a;
+  --card-sectionning-background-color: #94e82a;
+  --card-box-shadow: 0 0 1px #11191f;
+  --card-border-color: transparent;
+  --primary-focus: rgba(17, 25, 31, 0.25);
+  --primary-inverse: #FFF;
+}
+
+/* Indigo Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #94e82a;
+    --primary-hover: #ABEE59;
+    --background-color: #11191f;
+    --card-background-color: #11191f;
+    --card-sectionning-background-color: #11191f;
+    --card-box-shadow: 0 0 1px #94e82a;
+    --primary-focus: rgba(148, 232, 42, 0.25);
+    --primary-inverse: #000;
+  }
+}
+
+/* Indigo Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #94e82a;
+  --primary-hover: #ABEE59;
+  --card-background-color: #11191f;
+  --card-sectionning-background-color: #11191f;
+  --card-box-shadow: 0 0 1px #94e82a;
+  --primary-focus: rgba(148, 232, 42, 0.25);
+  --primary-inverse: #000;
+}
+
+/* Indigo (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+  --h2-color: var(--color);
+}
+
+nav[aria-label="breadcrumb"] {
+  justify-content: center;
+}

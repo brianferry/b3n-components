@@ -1,0 +1,39 @@
+{
+  "name": "@b3n/components",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    "./": "b3n.bundle.min.js"
+  },
+  "scripts": {
+    "build": "wireit"
+  },
+  "wireit": {
+    "bundle": {
+      "command": "node scripts/bundle.js"
+    },
+    "build": {
+      "command": "tsc",
+      "dependencies": [
+        "bundle"
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "lit": "^2.7.6",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0",
+    "esbuild": "^0.18.17",
+    "esbuild-plugin-lit-css": "^2.0.4",
+    "glob": "^9.3.1",
+    "typescript": "^5.1.6",
+    "wireit": "^0.10.0"
+  }
+}
